@@ -1,10 +1,6 @@
-# CurrencyConverter
+# Currency Converter
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.
-
-## Code scaffolding
-
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
 ## Technologies
 
@@ -19,7 +15,7 @@ To run the project, execute the following commands:
 1. Clone the repository to your local machine, open terminal and clone repo with command bellow.
 
 ```
-$ git clone hhttps://github.com/NadiiaKoch/currency-converter.git
+$ git clone https://github.com/NadiiaKoch/currency-converter.git
 ```
 
 2. Open project in terminal.

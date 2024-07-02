@@ -2,26 +2,43 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 17.2.0.
 
-## Development server
-
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
-
 ## Code scaffolding
 
 Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
 
-## Build
+## Technologies
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+- Angular
+- Angular Material
 
-## Running unit tests
+## Running the project
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+To run the project, execute the following commands:
+⚠️ Node.js version v18.17.1 .
 
-## Running end-to-end tests
+1. Clone the repository to your local machine, open terminal and clone repo with command bellow.
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+```
+$ git clone hhttps://github.com/NadiiaKoch/currency-converter.git
+```
 
-## Further help
+2. Open project in terminal.
+   Set up project and install necessary packages:
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+```
+$ cd currency-converter
+```
+
+3. Set up project and install necessary packages:
+
+```
+$ npm install
+```
+
+4. Add command to terminal:
+
+```
+$ npm start
+```
+
+5. Open application in your browser http://localhost:4200/

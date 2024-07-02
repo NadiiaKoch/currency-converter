@@ -1,0 +1,81 @@
+<mat-card>
+  <div class="currency-converter">
+    <div class="currency">
+      <mat-form-field appearance="fill">
+        <mat-label>Amount</mat-label>
+        <input
+          matInput
+          [(ngModel)]="amount1"
+          (input)="convert('amount1')"
+          type="number"
+
+        />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Currency</mat-label>
+        <input
+          matInput
+          [matAutocomplete]="auto1"
+          [(ngModel)]="currency1"
+          (ngModelChange)="filterCurrencies('currency1')"
+        />
+        <mat-autocomplete
+          #auto1="matAutocomplete"
+          (optionSelected)="convert('currency1')"
+        >
+          <mat-option
+            *ngFor="let currency of filteredCurrencies1"
+            [value]="currency.code"
+          >
+            {{ currency.name }} ({{ currency.code }})
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </div>
+
+    <div class="swap-button">
+      <button mat-icon-button (click)="swapCurrencies()">
+        <mat-icon>swap_horiz</mat-icon>
+      </button>
+    </div>
+
+    <div class="currency">
+      <mat-form-field appearance="fill">
+        <mat-label>Amount</mat-label>
+        <input
+          matInput
+          [(ngModel)]="amount2"
+          (input)="convert('amount2')"
+          type="number"
+        />
+      </mat-form-field>
+      <mat-form-field appearance="fill">
+        <mat-label>Currency</mat-label>
+        <input
+          matInput
+          [matAutocomplete]="auto2"
+          [(ngModel)]="currency2"
+          (ngModelChange)="filterCurrencies('currency2')"
+        />
+        <mat-autocomplete
+          #auto2="matAutocomplete"
+          (optionSelected)="convert('currency2')"
+        >
+          <mat-option
+            *ngFor="let currency of filteredCurrencies2"
+            [value]="currency.code"
+          >
+            {{ currency.name }} ({{ currency.code }})
+          </mat-option>
+        </mat-autocomplete>
+      </mat-form-field>
+    </div>
+  </div>
+
+  <div class="exchange-rate" *ngIf="exchangeRate">
+    <p>
+      1 {{ currency1 }} = {{ exchangeRate | number : "1.4-4" }}
+      {{ currency2 }}
+    </p>
+  </div>
+</mat-card>
